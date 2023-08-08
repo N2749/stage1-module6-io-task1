@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.logging.Logger;
 
 
 public class FileReader {
@@ -39,7 +38,7 @@ public class FileReader {
 //            System.err.println("file not found" + e.getMessage());
         } catch (IOException e) {
 //            do nothing
-//            System.err.println("some kind of io exception i guess" + e.getMessage());
+//            System.err.println("some kind of io exception I guess" + e.getMessage());
         }
         return profile;
     }
