@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 
 public class FileReader {
@@ -31,17 +32,15 @@ public class FileReader {
             if (params[3] != null)
                 profile.setPhone(Long.valueOf(params[3]));
         } catch (NumberFormatException e) {
-            System.err.println("error during conversion of age or phone" + e.getMessage());
+//            do nothing
+//            System.err.println("error during conversion of age or phone" + e.getMessage());
         } catch (FileNotFoundException e) {
-            System.err.println("file not found" + e.getMessage());
+//            do nothing
+//            System.err.println("file not found" + e.getMessage());
         } catch (IOException e) {
-            System.err.println("some kind of io exception i guess" + e.getMessage());
+//            do nothing
+//            System.err.println("some kind of io exception i guess" + e.getMessage());
         }
         return profile;
-    }
-
-    public static void main(String[] args) {
-        FileReader fileReader = new FileReader();
-        fileReader.getDataFromFile(new File("D:\\prog\\java\\mjs\\stage1-module6-io-task1\\src\\main\\resources\\Profile.txt"));
     }
 }
